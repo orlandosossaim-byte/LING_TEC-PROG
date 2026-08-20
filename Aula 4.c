@@ -2,27 +2,27 @@
 #include <stdlib.h>
 #include <math.h>
 int main(int argc, char *argv[]) {
-	// 1 ) Faça um programa que leia dois numeros inteiros e depois os imprima na ordem inversa em que eles foram lidos
+	// 1 ) FaÃ§a um programa que leia dois numeros inteiros e depois os imprima na ordem inversa em que eles foram lidos
 	int primeiro, segundo, aux;
-	printf("Insira o primeiro numero: ");
+	printf("\nInsira o primeiro numero: ");
 	scanf("%d", &primeiro);
 	printf("Insira o segundo numero: ");
 	scanf("%d", &segundo);
 	aux = primeiro;
 	primeiro = segundo;
 	segundo = aux;
-	printf("%d,%d\n", primeiro, segundo);
+	printf("%d,%d", primeiro, segundo);
 	
-	// 2 ) Faça um programa que leia um valor tipo double e depois o imprima na forma de notação cientifica
+	// 2 ) FaÃ§a um programa que leia um valor tipo double e depois o imprima na forma de notaÃ§Ã£o cientifica
 	double valor;
-	printf("Insira o valor que deseja ver em notacao cientifica: ");
+	printf("\nInsira o valor que deseja ver em notacao cientifica: ");
 	scanf("%lf", &valor);
-	printf("Valor em notacao cientifica : %e\n ", valor);
+	printf("Valor em notacao cientifica : %e ", valor);
 	
 	// 3 ) Implemente um programa que leia um numero N e mostre na tela o seu valor em base binaria (bits)
 	int n, b64, b32, b16, b8, b4, b2, resultado;
-	printf("Entre com o valor para conversao: ");
-	scanf("%d", &n);
+	printf("\nEntre com o valor para conversao: ");
+	scanf("%d", &resultado);
 	b64 = resultado%2;
 	resultado = resultado/2;
 	b32 = resultado%2;
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	b2 = resultado%2;
 	resultado = resultado/2;
 	printf("O numero %d em binario = %d%d%d%d%d%d%d", n, resultado%2, b2, b4, b8, b16, b32, b64);
-	// 4 ) Faça um programa que leia, o salario fixo e o valor total em vendas de um vendedor. 
+	// 4 ) FaÃ§a um programa que leia, o salario fixo e o valor total em vendas de um vendedor. 
 	//Sabendo que este vendedor ganha 15% de comissao sobre suas vendas efetuadas, mostre o total a receber no final do mes , com duas casas decimais
 	float va, com, venda, total;
 	printf("\nDigite o valor de seu salario: ");
@@ -70,8 +70,8 @@ int main(int argc, char *argv[]) {
 	dias = idade*365;
 	printf("Voce tem %f anos, %f meses, %f dias", idade, meses, dias);
 	
-	// 7 ) Faça um programa que calcule o volume de uma esfera senfo fornecido o valor de seu raio (R)
-	//A formula para calcular o volume é: (4/3)*pi*r³. Considere pi = 3.14159
+	// 7 ) FaÃ§a um programa que calcule o volume de uma esfera senfo fornecido o valor de seu raio (R)
+	//A formula para calcular o volume Ã©: (4/3)*pi*rÂ³. Considere pi = 3.14159
 	float V, r3, r;
 	float pi = 3.14159;
 	printf("\nQual e o raio da esfera?: ");
@@ -81,9 +81,9 @@ int main(int argc, char *argv[]) {
 	printf("O valor do volume da esfera e: %f\n", V);
 	// 8 ) Leia os quatro valores do usuario correspondentes as coordenadas em um plano cartesiano,p1(x1,y1) e
 	//p2(x2,y2) e calcule e mostre a distancia entre eles, aplicando a distancia euclidiana, segundo a formula.
-	//d=raiz((x2-x1)²+(y2-y1)²)
+	//d=raiz((x2-x1)Â²+(y2-y1)Â²)
 	float x1, y1, x2, y2, aux1, aux2, aux3, aux4, aux5, d, p1, p2;
-	printf("Digite o primeiro valor da coordenada (x1): ");
+	printf("\nDigite o primeiro valor da coordenada (x1): ");
 	scanf("%f", &x1);
 	printf("Digite o primeiro valor da coordenada (y1): ");
 	scanf("%f", &y1);
@@ -91,11 +91,11 @@ int main(int argc, char *argv[]) {
 	scanf("%f", &x2);
 	printf("Digite o primeiro valor da coordenada (y2): ");
 	scanf("%f", &y2);
-	//(x2-x1)²+(y2-y1)²
+	//(x2-x1)Â²+(y2-y1)Â²
     p1 = pow(x2-x1, 2);
     p2 = pow(y2-y1, 2);
     d = sqrt(p1+p2);
-	printf("A distancia euclidiana e de: %f", d);
+	printf("A distancia euclidiana e de: %.2f", d);
 
 		return 0;
 }
