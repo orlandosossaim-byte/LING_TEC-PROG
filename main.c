@@ -1,69 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, char *argv[]) {
-	// 1 ) Faça um programa que leia dois numeros inteiros e depois os imprima na ordem inversa em que eles foram lidos
-	int primeiro, segundo, aux;
-	printf("Insira o primeiro numero: ");
-	scanf("%d", &primeiro);
-	printf("Insira o segundo numero: ");
-	scanf("%d", &segundo);
-	aux = primeiro;
-	primeiro = segundo;
-	segundo = aux;
-	printf("%d,%d\n", primeiro, segundo);
+	// 1 ) Faça um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual.
 	
-	// 2 ) Faça um programa que leia um valor tipo double e depois o imprima na forma de notação cientifica
-	double valor;
-	printf("Insira o valor que deseja ver em notacao cientifica: ");
-	scanf("%lf", &valor);
-	printf("Valor em notacao cientifica : %e\n ", valor);
+	// 2 ) Leia uma velocidade em km/h (quilômetros por hora) e apresente convertida em m/s (metros por segundo).
+	// A fórmula de conversão é M = K / 3,6, sendo K a velocidade em km/h e M em m/s.
+
+	// 3 ) Faça um programa que leia um valor em reais e a cotação do dólar. Em seguida, imprima o valor correspondente em dólares.
+
+	// 4 ) Leia um valor que represente uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. 
+	//A fórmula de conversão é: F = C * (9.0/5.0) + 32.0, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
+
+	// 5 ) Leia um ângulo em graus e apresente-o convertido em radianos. 
+	//A fórmula de conversão é R = G * p/180, sendo G o ângulo em graus, R em radianos e p = 3.141592.
+
+	// 6 ) Faça um programa que leia um número inteiro e retorne seu antecessor e seu sucessor.
+    float suc, ant, num;
+    printf("\nDigite um numero: ");
+    scanf("%f", &num);
+    suc = num + 1;
+    ant = num - 1;
+    printf("O antecessor do seu numero e %f e o sucessor e %f", ant, suc);
+	// 7 ) A importância de R$780.000,00 será dividida entre três ganhadores de um concurso, sendo que :
+    //    O primeiro receberá 46% do total;
+    //    O segundo receberá 32% do total;
+    //    O terceiro receberá o restante.
+    //    Calcule e imprima a quantia recebida por cada um dos ganhadores.
+    
+	// 8 ) (URI 1019) Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento em uma fábrica, e 
+	//informe-o expresso no formato horas:minutos:segundos.
+
+    // 9 ) (URI 1017) Joãozinho quer calcular a quantidade de litros de combustível gastos em uma viagem, ao utilizar um automóvel que faz 12 KM/L. 
+	//Para isso, ele gostaria que você o auxiliasse através de um simples programa. Para efetuar o cálculo, 
+	//deve-se fornecer o tempo gasto na viagem (em horas) e a velocidade média durante a mesma (em km/h). 
+	//Assim, pode-se obter distância percorrida e, em seguida, calcular quantos litros seriam necessários. Mostre o valor com 3 casas decimais após o ponto.
+	float kml, kmh, kmt, t;
+	printf("\nQuantos Km eh a viagem: ");
+	scanf("%f", &kmt);
+	printf("Qual a velocidade que percorreu? ")
+	kml = kmt / 12; //quantidade de litro
 	
-	// 3 ) Implemente um programa que leia um numero N e mostre na tela o seu valor em base binaria (bits)
+     
+    //10) (URI 1013) Faça um programa que leia três valores e apresente o maior dos três valores lidos seguido da mensagem “eh o maior”. Utilize a fórmula:
+    //MaiorAB = (a + b + abs(a - b)) / 2    
+    float a, b, c, d, maior, maior_t, maior1;
+    printf("\nInforme os valores a serem comparados: ");
+    scanf("%f %f %f %f", &a, &b, &c, &d);
+    maior_t = (a+b+abs(a-b))/2;
+    maior1 = (maior_t+c+abs(maior_t-c))/2;
+    maior = (maior1 +d+abs(maior1-d))/2;
+        
+
+    printf("O maior entre |%f|%f|%f|%f| = %.2f", a,b,c,d, maior);
+
+
 	
 	
 	
 	
 	
-	// 4 ) Faça um programa que leia, o salario fixo e o valor total em vendas de um vendedor. 
-	//Sabendo que este vendedor ganha 15% de comissao sobre suas vendas efetuadas, mostre o total a receber no final do mes , com duas casas decimais
-	float va, com, venda, total;
-	printf("Digite o valor de seu salario: ");
-	scanf("%f", &va);
-	printf("Digite o total de suas vendas: ");
-	scanf("%f", &venda);
-	com = venda * 0.15;
-	total = com + va;
-	printf("O valor total que ira receber e de: %.2f", total);
-	
-	// 5 ) Elabore um programa que peca ao usuario para digitar 4 valores. E mostre na tela a soma, a media, e o produtorio desses valores
-	float v1, v2, v3, v4, media, soma, produtorio;
-	printf("\nDigite o primeiro valor: ");
-	scanf("%f", &v1);
-	printf("Digite o segundo valor: ");
-	scanf("%f", &v2);
-	printf("Digite o terceiro valor: ");
-	scanf("%f", &v3);
-	printf("Digite o quarto valor: ");
-	scanf("%f", &v4);
-	soma = v1 + v2 + v3 + v4;
-	media = soma / 4;
-	produtorio = v1 * v2 * v3 * v4;
-	printf("A soma dos valores e: %f , a media dos valores e: %f , o produtorio dos valores e: %f", soma, media, produtorio);
-	
-	// 6 ) Leia um valor inteiro correspondente a idade de uma pessoa em dias e informe-as em anos meses e dias
-	float idade, anos, meses, dias;
-	printf("\nInsira sua idade: ");
-	scanf("%f", &idade);
-	meses = idade*12;
-	dias = idade*365;
-	printf("Voce tem %f anos, %f meses, %f dias", idade, meses, dias);
-	
-	// 7 ) Faça um programa que calcule o volume de uma esfera senfo fornecido o valor de seu raio (R)
-	//A formula para calcular o volume é: (4/3)*pi*r³. Considere pi = 3.14159
-	
-	// 8 ) Leia os quatro valores do usuario correspondentes as coordenadas em um plano cartesiano,p1(x1,y1) e
-	//p2(x2,y2) e calcule e mostre a distancia entre eles, aplicando a distancia euclidiana, segundo a formula.
-	//d=raiz((x2-x1)²+(y2-y1)²)
-	
-		return 0;
+	return 0;
 }
