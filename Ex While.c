@@ -1,32 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ExercÌcio 1: contar do primeiro valor atÈ o segundo, com passo
+// Exerc√≠cio 1: contar do primeiro valor at√© o segundo, com passo
 void exercicio1() {
-    int a, b, passo;
-
-    printf("Primeiro valor: ");
-    scanf("%d", &a);
-    printf("Segundo valor: ");
-    scanf("%d", &b);
-    printf("Passo: ");
-    scanf("%d", &passo);
-
-    passo = abs(passo);
-
-    if (passo == 0) {
-        printf("O passo nao pode ser zero!\n");
-        return;
+   int ini, fim, passo;
+printf("entre com o valor inicial, final e passo: ");
+scanf("%d %d %d", &ini, &fim, &passo);
+if(ini<fim){
+    while(ini<fim){
+        printf("|%d|", ini);
+        ini += passo;
     }
-
-    while (a <= b) {
-        printf("%d ", a);
-        a = a + passo;
+}else{
+    while(ini>fim){
+    printf("|%d|", ini);
+    ini -= passo;
     }
-    printf("\n");
 }
 
-// ExercÌcio 2: soma 1/2 + 1/4 + 1/8 + ... (n termos)
+// Exerc√≠cio 2: soma 1/2 + 1/4 + 1/8 + ... (n termos)
 void exercicio2() {
     int n, i;
     double termo = 1.0, soma = 0.0;
@@ -41,7 +33,7 @@ void exercicio2() {
     printf("S = %.50lf\n", soma);
 }
 
-// ExercÌcio 3: tri‚ngulo de Pascal
+// Exerc√≠cio 3: tri√¢ngulo de Pascal
 void exercicio3() {
     int n, i, j, esp, c;
 
